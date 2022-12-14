@@ -1,0 +1,407 @@
+
+body, html {
+  height: 100%; 
+  font-family: 'Special Elite', cursive; 
+}
+
+body {
+  background-color: white; 
+}
+
+.header {
+  filter: brightness(79%);
+  display: flex;
+}
+
+.nav-left {
+  margin-left: 20px; 
+}
+
+#bookbtn {
+  font-family: 'Special Elite', cursive;
+  margin-right: -30px; 
+}
+
+.title, .subtitle { 
+  font-family: 'Satisfy', cursive;
+}
+
+footer {
+  height: 80vh;
+}
+
+.footer__title {
+ font-size: 12px; 
+}
+
+.content  {
+  text-align: center;
+  padding-top: 145px;
+}  
+
+.divider {
+  margin-top: -120px;
+}
+
+.subtitle {
+  margin-top: -1.5rem;
+}
+
+/** Image Slideshow **/
+.splash {
+  /* background-image: url(''); */
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 100px;
+  height: 80vh;
+  filter: brightness(79%); 
+}
+
+.imgSlide  {
+  object-fit: cover;
+  width: auto;
+  height: 80%;
+  margin: auto;
+  transition-timing-function: ease-in-out;
+  animation: fadeIn 5s; 
+}
+
+#media {
+  left: 45%;
+  bottom: -25px; 
+  text-align: center !important;
+}
+
+/** Landing **/
+.land-wrap {
+  font-family: sans-serif;
+  background-image: url("https://droppingbeets.com/wp-content/uploads/2021/01/Dropping-beets-personal-chef.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  line-height: 1.6;
+  text-align: center;
+  height: 100vh;
+  width: 100vw; 
+}
+
+.land-main {
+  max-width: 960px; 
+  margin: auto;
+  padding: 0 30px;
+}
+
+#land-title {
+  height: 300px;
+}
+
+#land-title h1 {
+  font-size: 24px;
+  line-height: 1.3;
+  position: relative;
+  animation-name: heading;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes heading {
+  0% {
+    top: -50px;
+  }
+  100%{
+    top: 200px;
+  }
+  
+}
+
+#landmn {
+    position: relative;
+    animation-name: content;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+  @keyframes content {
+    0% {
+      left: -1000px;
+    }
+    100%{
+      left: 0px;
+    }
+  }
+  
+.btn {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  border: white 2px solid;
+  border-radius: 25px;
+  margin-top: 40px;
+  opacity: 0;
+  animation-name: button;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  transition-property: transform;
+  transition-duration: 3s;
+}
+
+.btn:hover {
+  transform: rotate(360deg);
+}
+
+@keyframes button{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/** 404 **/
+@media only screen and (max-width: 425px){
+	.error-wrap {
+  height: 100vh;
+  padding-top: 100px;
+  background-color: black;
+  color: white;
+  }
+}
+
+.error-wrap{
+  height: 100vh;
+  padding-top: 100px;
+  background-color: black;
+  color: white;
+}
+
+.error-text {
+  position: fixed; 
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+}
+
+.faux {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background-color:black;
+  color: white;
+  text-align: center;
+}
+
+.faux-wrap {
+  margin-bottom: 5em;
+}
+
+.faux-info {
+  border-top: 1px solid grey;
+  width: 45%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 20px 0;  
+}
+
+.ag-preload {
+  width: 12.5rem;
+  height: 12.5rem;
+  margin: -150px 0 0 -100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.ag-preload:before,
+.ag-preload:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ag-preload:before {
+  background-image: url(https://abrokenperspective.neocities.org/zimmerle/images/knife-left.svg);
+  filter: invert(1);
+  -webkit-filter: invert(1);
+  -webkit-animation: an-preload-left 1s alternate linear;
+  -moz-animation: an-preload-left 1s alternate linear;
+  -o-animation: an-preload-left 1s alternate linear;
+  animation: an-preload-left 1s alternate linear;
+
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.ag-preload:after {
+  background-image: url(https://abrokenperspective.neocities.org/zimmerle/images/knife-right.svg);
+  filter: invert(1);
+  -webkit-filter: invert(1);
+  -webkit-animation: an-preload-right 1s alternate linear;
+  -moz-animation: an-preload-right 1s alternate linear;
+  -o-animation: an-preload-right 1s alternate linear;
+  animation: an-preload-right 1s alternate linear;
+
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes an-preload-left {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) scale(1, 1) skew(0deg, 0deg) translate(-30px, 0px);
+    transform: rotate(45deg) scale(1, 1) skew(0deg, 0deg) translate(-30px, 0px);
+  }
+}
+
+@-moz-keyframes an-preload-left {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(45deg) scale(1, 1) skewX(0deg) skewY(0deg) translate(-30px, 0px);
+    transform: rotate(45deg) scale(1, 1) skew(0deg, 0deg) translate(-30px, 0px);
+  }
+}
+
+@-ms-keyframes an-preload-left {
+  0% {
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(45deg) scale(1, 1) skew(0deg, 0deg) translate(-30px, 0px);
+    transform: rotate(45deg) scale(1, 1) skew(0deg, 0deg) translate(-30px, 0px);
+  }
+}
+
+@-o-keyframes an-preload-left {
+  0% {
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(45deg) scale(1, 1) skew(0deg, 0deg) translate(-30px, 0px);
+    transform: rotate(45deg) scale(1, 1) skew(0deg, 0deg) translate(-30px, 0px);
+  }
+}
+
+@keyframes an-preload-left {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg) scale(1, 1) skew(0deg, 0deg) translate(-30px, 0px);
+    -moz-transform: rotate(45deg) scale(1, 1) skewX(0deg) skewY(0deg) translate(-30px, 0px);
+    -ms-transform: rotate(45deg) scale(1, 1) skew(0deg, 0deg) translate(-30px, 0px);
+    -o-transform: rotate(45deg) scale(1, 1) skew(0deg, 0deg) translate(-30px, 0px);
+    transform: rotate(45deg) scale(1, 1) skew(0deg, 0deg) translate(-30px, 0px);
+  }
+}
+
+@-webkit-keyframes an-preload-right {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) scale(1, 1) skew(0deg, 0deg) translate(30px, 0px);
+    transform: rotate(-45deg) scale(1, 1) skew(0deg, 0deg) translate(30px, 0px);
+  }
+}
+
+@-moz-keyframes an-preload-right {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(-45deg) scale(1, 1) skewX(0deg) skewY(0deg) translate(30px, 0px);
+    transform: rotate(-45deg) scale(1, 1) skew(0deg, 0deg) translate(30px, 0px);
+  }
+}
+
+@-ms-keyframes an-preload-right {
+  0% {
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(-45deg) scale(1, 1) skew(0deg, 0deg) translate(30px, 0px);
+    transform: rotate(-45deg) scale(1, 1) skew(0deg, 0deg) translate(30px, 0px);
+  }
+}
+
+@-o-keyframes an-preload-right {
+  0% {
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(-45deg) scale(1, 1) skew(0deg, 0deg) translate(30px, 0px);
+    transform: rotate(-45deg) scale(1, 1) skew(0deg, 0deg) translate(30px, 0px);
+  }
+}
+
+@keyframes an-preload-right {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) scale(1, 1) skew(0deg, 0deg) translate(30px, 0px);
+    -moz-transform: rotate(-45deg) scale(1, 1) skewX(0deg) skewY(0deg) translate(30px, 0px);
+    -ms-transform: rotate(-45deg) scale(1, 1) skew(0deg, 0deg) translate(30px, 0px);
+    -o-transform: rotate(-45deg) scale(1, 1) skew(0deg, 0deg) translate(30px, 0px);
+    transform: rotate(-45deg) scale(1, 1) skew(0deg, 0deg) translate(30px, 0px);
+  }
+}
+
+.zee-circle {
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    padding: 8px;
+    border: 2px solid grey;
+    color: #666;
+    text-align: center; 
+    font: 35px Arial, sans-serif;
+    position: fixed;
+    left: 48%; 
+}
+
+.zee-circle:hover {
+  animation: spin 10s linear infinite;
+  color:white
+}
+
+@keyframes spin {
+    100% { transform: rotate(-360deg); }
+    0% { transform: rotate(0deg); }
+}

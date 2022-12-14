@@ -1,0 +1,20 @@
+{
+  "files": {
+    "pages/components/404.js": [
+      {
+        "id": "c8133552-87df-438a-9ed2-4c4bba896c6e",
+        "line": 1,
+        "version": 0,
+        "index": 0
+      }
+    ],
+    "styles/zimm.css": [
+      {
+        "id": "e86d9c89-c16a-4555-850d-ba9fb30b8752",
+        "line": 458,
+        "version": 9269,
+        "index": 9570
+      }
+    ]
+  }
+}
