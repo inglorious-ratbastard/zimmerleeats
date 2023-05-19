@@ -12,7 +12,7 @@ ___
 ###### &copy;2022 **Zimmerle Brews & Preserves/Zimmerle Eats**
 ###### **An IngloriousRat *Culinary Concept* Application** 
 ###### **React/NextJS - CirrusUI Web App** <br>
-#### <h6 align="center">[Live Version](https://zimmerleeats.ingloriousrat.repl.co/)</h6>
+#### <h6 align="center">[Live Version](https://zimmerleeats.vercel.app/)</h6>
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
