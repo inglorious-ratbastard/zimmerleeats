@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import Head from 'next/head' 
 
 export default function NotFound () {
   
@@ -8,25 +9,25 @@ export default function NotFound () {
 
   useEffect(()=> {
   setTimeout(() => {  
-    router.push('/zimmerle')
-  }, 3000000 )
+    { router.push('/home') }
+  }, 60000 ) 
   }, [])
 
- return <div className="error-wrap">
-   
+ return <div className="error-wrap u-center">
+  
 <div className="bg-black" id="error">
 
  <div className="error-content" id="error-info">
  
- <h6 className="error-text"><span className="w3-tag w3-wide">Sorry That Page Cannot Be Found</span></h6>
+ <h6 className="error-text"><span className="err_tx" style={{   fontSize: 15 + 'px', overflow: 'hidden' , whiteSpace: 'nowrap' }}>Sorry That Page Cannot Be Found</span></h6>
  
  <div className="ag-preload"></div>
 
   <div className="faux">
    <section className="faux-wrap">
-    <p style={{ marginBottom: 15 + 'px' }}>It Looks like you stumbled into the pantry</p>
+    <p style={{ marginBottom: 15 + 'px', fontSize: 15 + 'px' }}>It Looks like you stumbled into the pantry</p>
     <div className="faux-info">
-      <div className="zee-circle"><Link href="/zimmerle">Z</Link></div>
+      <div className="zee-circle"><Link href="/home">Z</Link></div>
     </div>
    </section>
   </div>
