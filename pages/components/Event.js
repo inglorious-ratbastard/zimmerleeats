@@ -6,7 +6,7 @@ export default class Event extends React.Component {
         return (
           <React.Fragment>
           
-<div className="u-text-center pt-2 pb-2" id="event">
+<div className="u-text-center pt-2" id="event">
    <div className="event-content mt-6" id="event-info">
 
    <div className="row u-center">

@@ -7,16 +7,16 @@ export default class Footer extends React.Component {
       return (
         <React.Fragment>
     
-<footer className="footer bg-black u-opacity-80" id="footer">
+<footer className="footer bg-gray-700 u-opacity-90" id="footer">
 
-     <div className="text-white" id="topper">
-       <button className="btn-transparent text-white"><i className="fa fa-bars" id="foot_tog"></i></button>
+     <div className="text-white bg-gray-700 pt-1" id="topper">
+     <button className="btn-transparent text-white"><i className="fa fa-utensils fa-lg pt-3" id="foot_tog"></i></button> 
      </div>
-    <h6 className="footer__title text-white font-light uppercase">Zimmerle & Wisloff</h6>
+    <h6 className="footer__title text-white font-semibold uppercase">Zimmerle Eats</h6>
   
-  <div className="content bg-black u-opacity-80"> 
+  <div className="content bg-gray-700"> 
     <div className="divider"></div> 
-       <div className="row">
+       <div className="row pt-1">
             <div className="col-4">
                 <ul className="no-bullets">
                     <a href="!#">
@@ -35,7 +35,7 @@ export default class Footer extends React.Component {
             <div className="col-4">
                 <ul className="no-bullets">
                     <a href="!#">
-                        <li className="footer__list-item">Company Information</li>
+                        <li className="footer__list-item">Information</li>
                     </a>
                     <a href="!#">
                         <li className="footer__list-item">Contact Us</li>
@@ -64,7 +64,7 @@ export default class Footer extends React.Component {
             </div>
         </div>
            <div className="footnote pt-2">
-      <p className="subtitle bg-black">Zimmerle & Wisloff © 2023.</p> 
+      <p className="subtitle bg-gray-700 pt-1 text-yellow-400">Zimmerle Eats © 2024.</p> 
           </div>
     </div>
     
@@ -77,12 +77,12 @@ const footer = document.getElementById('footer');
 var status = footer.className.includes('active'); 
 document.getElementById("foot_tog").addEventListener("click", function() {
       if(status === "false"){
-        footer.style.height = "48vh";
+        footer.style.height = "38%";
         footer.scrollIntoView({ block: "end" });
         footer.classList.add("active");
         status = !!"false"; 
-    } else if(status == "true"){
-        footer.style.height = "133.6px";
+    } else if(status == "true"){ 
+        footer.style.height = "5.5rem";
         status = !status;
       } 
 }); 

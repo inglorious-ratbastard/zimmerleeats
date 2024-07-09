@@ -6,7 +6,7 @@ export default function Home() {
   return (
    <div className={styles.container}>
     <Head>
-      <title>Zimmerle & Wisloff - Culinaire Privé</title>
+      <title>Zimmerle Eats</title>
     </Head>
      
     <Landing />
