@@ -18,9 +18,9 @@ return  <div className="land-wrap">
   <h1 className="font-light">Zimmerle Eats | Chef & Charcutier</h1>
   </header>
   <div id="landmn" className="land-main leading-tight">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, ad quasi expedita vitae sint quas qui ut fugiat voluptatibus eaque dolorum, necessitatibus animi magnam? Necessitatibus, asperiores nulla incidunt corrupti ut, cum tenetur dolorum inventore commodi illo consequuntur? Voluptas esse harum adipisci! Obcaecati voluptatum minima beatae vitae. Ad alias recusandae saepe.
+    A dedicated local chef, crafting expertly cured meats and thoughtfully prepared meals for intimate home gatherings and fully catered events alike. Drawing on refined technique and bold flavors, each dish is carefully planned, patiently prepared, and finished with purpose. From handcrafted charcuterie to complete menus, every offering reflects care, precision, and pride. Guests experience food that feels personal, memorable, and intentionally made.
   </div>
-  <a href="home" className="btn bg-gray-700 text-white">Enter</a>
+  <a href="home" className="btn bg-gray-700 text-white">Taste</a>
 
 </div> 
 

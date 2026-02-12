@@ -1,116 +1,166 @@
-import React, { Component } from "react";
+'use client'
+import React from "react";
 import Script from 'next/script'
 
 export default class Navbar extends React.Component {
+      constructor(props) {
+      super(props);
+      this.state = { showModal: false };
+    }
+
+    openModal = () => {
+      this.setState({ showModal: true });
+      document.body.style.overflow = 'hidden';
+    };
+
+    closeModal = () => {
+      this.setState({ showModal: false });
+      document.body.style.overflow = 'auto';
+    };
+
+    scrollToSection = (id) => (e) => {
+      e.preventDefault();
+
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+
+      const menu = document.getElementById("header-menu");
+      const btn = document.getElementById("header-btn");
+
+      if (menu && btn) {
+        menu.classList.remove("active");
+        btn.classList.remove("active");
+      }
+    };
+
+    scrollToBoard = (accordionIndex) => (e) => {
+      e.preventDefault();
+
+      const el = document.getElementById("board");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+
+      window.dispatchEvent(new CustomEvent("openAccordion", { detail: accordionIndex }));
+
+      const menu = document.getElementById("header-menu");
+      const btn = document.getElementById("header-btn");
+      if (menu && btn) {
+        menu.classList.remove("active");
+        btn.classList.remove("active");
+      }
+    };
+
 
     render() {
         return (
           <React.Fragment>
 
-          <div className="header header-fixed unselectable-header-animated bg-gray-400">
+        <div className="header header-fixed unselectable-header-animated bg-gray-700">
         <div className="header-brand">
             <div className="nav-item no-hover">
-               <a href="#"><h6 className="title text-red-600 text-md font-bold">Zimmerle Eats</h6></a>
+               <a onClick={this.scrollToSection("home")}><h6 className="title text-md font-bold">Zimmerle Eats</h6></a>
             </div>
            <div className="nav-item nav-btn" id="header-btn"> <span></span> <span></span> <span></span> </div>
          </div>
             
            <div className="header-nav" id="header-menu">
             <div className="nav-left">
-              <div className="nav-item text-md">
-                <a href="#about">About Chef</a>
+              <div className="nav-item text-md no-hover">
+                <a onClick={this.scrollToSection("about")} >About Chef</a>
               </div>
-              <div className="nav-item">
-                <a href="#contact">Contact</a> 
+              <div className="nav-item no-hover">
+                <a onClick={this.scrollToSection("service")} >Services</a> 
               </div>
-              <div className="nav-item">
-                <a href="#board">Gallerie</a> 
+              <div className="nav-item no-hover">
+                <a onClick={this.scrollToSection("gallery")} >Gallerie</a> 
               </div>
 
-               <div className="nav-item has-sub toggle-hover" id="dropdown">
-                  <a className="nav-dropdown-link mr-0-md">Tasting Board</a> 
-                  <ul className="dropdown-menu dropdown-animated bg-blue-100" role="menu">
-                     <li role="menu-item"><a href="#menu">Beverages</a></li>
-                     <li role="menu-item"><a href="#menu">Apps & Entrees</a></li>
-                     <li role="menu-item"><a href="#menu">Desserts</a></li>
+               <div className="nav-item has-sub toggle-hover no-hover" id="dropdown">
+                  <a className="nav-dropdown-link" onClick={this.scrollToSection("board")}>Tasting Board</a> 
+                  <ul className="dropdown-menu dropdown-animated bg-gray-700" role="menu">
+                     <li role="menu-item"><a onClick={this.scrollToBoard(0)} >Beverages</a></li>
+                     <li role="menu-item"><a onClick={this.scrollToBoard(1)} >Apps & Entrees</a></li>
+                     <li role="menu-item"><a onClick={this.scrollToBoard(2)} >Desserts</a></li>
                   </ul>
                </div>
-               <div className="nav-item">
-                <a href="#event" >Events</a>
+               <div className="nav-item no-hover">
+                <a onClick={this.scrollToSection("event")} >Events</a>
               </div>
               <div className="nav-right">
-                 <button className="bg-teal-400 u-opacity-30 text-white text-xs font-bold btn--xs u-round-xl" id="bookbtn"><a href="#test-modal">Book Your Event</a></button>
+                 <button
+                  onClick={this.openModal}
+                  className="bg-teal-400 u-opacity-30 text-white text-xs font-bold btn--xs u-round-xl ml-6"
+                >
+                  Book Your Event
+                </button>
               </div>
             </div> 
          </div>            
       </div> 
 
-    <div className="modal modal-animated--zoom-in" id="test-modal">
-    <a href="#event" className="modal-overlay close-btn" aria-label="Close"></a>
-    <div className="modal-content u-text-center" role="document">
+      {this.state.showModal && (
+        <div className="header-modal">
+          <div className="modal-overlay" onClick={this.closeModal}>
+            <div className="modal" onClick={e => e.stopPropagation()}>
+              <button className="modal-close" onClick={this.closeModal}>✕</button>
 
-        <div className="modal-header pb-0"><a href="#event" className="u-pull-right" aria-label="Close"><span className="icon"><i className="fa-wrapper fa fa-times"></i></span></a>
-            <div className="modal-title text-lg">Zimmerle & Wisloff Events</div>
-            <div className="text-sm font-bold mr-3">Your Mom Likes Charcuterie</div>
-        </div>
+              <h2 className="text-lg font-bold mb-3">Book Your Event</h2>
 
-        <div className="modal-body">
-          <form className="form text-xs u-center">
-            <label>
-              Enter your birthday:
-              <input className="input--xs" type="date" name="bday" />
-            </label>
-             <div className="form-group text-xs">
-              <label>First Name
-                <input className="input--xs" type="text" name="fname" placeholder="john.doe@cirrus.io" /></label>
-              <label>Last Name
-                <input className="input--xs" type="text" name="lname" placeholder="john.doe@cirrus.io" /></label>
+              <form className="modal-form">
+                <input type="text" placeholder="Full Name" required />
+                <input type="email" placeholder="Email Address" required />
+                <input type="tel" placeholder="Phone Number" />
+
+                <select required>
+                  <option value="">Event Type</option>
+                  <option>Private Dinner</option>
+                  <option>Corporate Event</option>
+                  <option>Wedding</option>
+                  <option>Other</option>
+                </select>
+
+                <input type="date" required />
+                <input type="number" placeholder="Number of Guests" />
+
+                <textarea placeholder="Tell us about your event..." rows="4"></textarea>
+
+                <button type="submit" className="bg-teal-500 text-white btn btn-block">
+                  Submit Request
+                </button>
+              </form>
             </div>
-            <div className="form-group-input text-xs">
-              <label>Email Address
-                <input className="input--xs" type="text" name="email" placeholder="john.doe@cirrus.io" autoComplete="off" /></label>
-            </div> 
-              <textarea className="input--xs h-10p mt-2" placeholder="Extra small (0.75rem)" type="text" name="input" autoComplete="off"></textarea> 
-          </form>
-        </div> 
-
-        <div className="modal-footer">
-            <div className="form-section u-text-right">
-                <a href="#event">
-                    <button className="btn btn-primary btn--sm u-pull-left mb-2 u-opacity-60">Cancel</button>
-                </a>
-                <a href="#event">
-                    <button className="btn btn-dark btn--sm u-pull-right mb-2 u-opacity-60">Submit</button>
-                </a>
-            </div>
+          </div>
         </div>
-    </div>
-</div>    
+        )}
                    
-<Script id="nav-scripts"> 
+<Script id="nav-scripts" strategy="afterInteractive">
 {`
-        let navBtns = document.querySelectorAll('.nav-btn');
-        navBtns.forEach(function (ele) {
-        ele.addEventListener('click', function() {
-        
-        let dropDownMenu = document.getElementById("header-menu");
+  const navBtn = document.getElementById("header-btn");
+  const headerMenu = document.getElementById("header-menu");
 
-        ele.classList.toggle('active');
-        dropDownMenu.classList.toggle('active');
+  if (navBtn && headerMenu) {
+    // Toggle menu open / close
+    navBtn.addEventListener("click", () => {
+      navBtn.classList.toggle("active");
+      headerMenu.classList.toggle("active");
+    });
 
-        var allLinks = document.links;
-        for (var i = 0, n = allLinks.length; i < n; i++) {
-             allLinks[i].onclick = function () { 
-               ele.classList.toggle('active');
-               dropDownMenu.classList.toggle('active');
-             }
-        }; 
-        
+    // Close menu when any nav link is clicked
+    const navLinks = headerMenu.querySelectorAll("a");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navBtn.classList.remove("active");
+        headerMenu.classList.remove("active");
       });
-
-    });       
+    });
+  }
 `}
 </Script>
+
           </React.Fragment>
         )
     }

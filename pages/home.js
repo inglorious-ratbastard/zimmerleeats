@@ -2,10 +2,10 @@ import Head from 'next/head'
 import Navbar from './components/Navbar';
 import Splash from './components/Splash';
 import About from './components/About';
+import Services from './components/Services';
+import Gallery from './components/Gallery';
 import Board from './components/Board';
-import Menu from './components/Menu';
 import Event from './components/Event';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function Home() {
@@ -22,10 +22,10 @@ export default function Home() {
           </div>
             <Navbar />
             <Splash />
-            <About />
-            <Contact />
+            <About /> 
+            <Services />
+            <Gallery />
             <Board />
-            <Menu />
             <Event />
             <Footer /> 
       </div>    
