@@ -712,8 +712,8 @@ landwrap > .btn:hover {
   font-family: 'EB Garamond', serif;
 }
 
-.error-text {
-  font-family: 'Mukta', sans-serif;
+.error-text { 
+  font-family: 'EB Garamond', serif;
   font-size: 14px;
   position: fixed; 
   top: 10%;
@@ -840,15 +840,25 @@ landwrap > .btn:hover {
     border-radius: 50%;
     width: 56px;
     height: 56px;
-    padding: 8px; 
     border: 2px solid grey;
     color: #666;
-    font: 35px Arial, sans-serif;
+    font: 28px Arial, sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     position: absolute; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.zee-circle a {
+    text-decoration: none;
+    color: inherit;
+    line-height: 1;
+} 
 
 .zee-circle a:hover { 
   color: white; 
