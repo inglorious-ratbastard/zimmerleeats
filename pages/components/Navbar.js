@@ -142,13 +142,11 @@ export default class Navbar extends React.Component {
   const headerMenu = document.getElementById("header-menu");
 
   if (navBtn && headerMenu) {
-    // Toggle menu open / close
     navBtn.addEventListener("click", () => {
       navBtn.classList.toggle("active");
       headerMenu.classList.toggle("active");
     });
 
-    // Close menu when any nav link is clicked
     const navLinks = headerMenu.querySelectorAll("a");
 
     navLinks.forEach(link => {
