@@ -853,6 +853,25 @@ landwrap > .btn:hover {
     color: white;
   }
 }
+ 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .landing-page {
+    padding-top: 120px; 
+    margin: auto;
+  }
+
+  #land-title {
+    margin-bottom: 20px;
+  }
+
+  #landmn {
+    margin-bottom: 25px;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
+}
 
 .error-wrap{
   height: 100vh;
