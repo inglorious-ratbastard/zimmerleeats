@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function ImageGallery({ onBack, title }) {
+export default function ImageGallery({ onBack, title }) { 
   const [selectedImage, setSelectedImage] = useState(null);
   const [images, setImages] = useState([]);
 
@@ -21,6 +21,18 @@ export default function ImageGallery({ onBack, title }) {
           opacity: 1;
           transform: scale(1);
         }
+      } 
+
+      @media (min-width: 750px) and (max-width: 900px) {
+        .image-grid {
+          grid-template-columns: repeat(3, 1fr) !important;
+        }
+      }
+
+      @media (min-width: 912px) and (max-width: 1368px) {
+        .image-grid {
+          grid-template-columns: repeat(3, 1fr) !important;
+        }
       }
     `;
     document.head.appendChild(style);
@@ -31,7 +43,7 @@ export default function ImageGallery({ onBack, title }) {
       <div style={styles.container}>
         <h5 style={styles.title}>{title} Collection</h5>
 
-        <div style={styles.grid}>
+        <div style={styles.grid} className="image-grid">
           {images.map((img, index) => (
             <div
               key={index}
@@ -158,4 +170,4 @@ const styles = {
     cursor: "pointer",
     transition: "all 0.2s ease",
   } 
-}; 
+};

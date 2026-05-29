@@ -1253,6 +1253,38 @@ ul li {
   font-weight: 600;
 }
 
+@media screen and (width: 912px) and (height: 1368px) {
+  .cen {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .service {
+    width: 100%;
+  }
+}
+
+@media screen and (width: 820px) and (height: 1180px) {
+  .cen {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .service {
+    width: 100%;
+  }
+}
+
 @media (max-width: 800px) {
   .service {
     flex: 0 0 50%;
