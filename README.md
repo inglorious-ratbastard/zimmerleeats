@@ -1,31 +1,77 @@
-### Zimmerle Eats - Personal Chef Services
-#### **Chef Nick Zimmerle - San Antonio, TX**
+#### Zimmerle Eats - Personal Chef Services
+##### A professionally developed digital platform for Zimmerle Eats, built to establish a polished online presence, showcase personalized chef services, and provide a scalable foundation for customer engagement and future business growth.
+
+___
+##### **Chef Nick Zimmerle - San Antonio, TX**
 #### *@zimmerleeats*
 #### *#zimmerleeats*<br>
 ##### Find me on social media and don't forget to *Like* and *Subscribe!*
 ![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)
 ![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)
 ![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)
-![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?style=for-the-badge&logo=TikTok&logoColor=white)
 ##### Dedicated to providing the highest quality product, made from the freshest ingredients available to satisfy your edacious palate.
 ___
-###### &copy;2022 **Zimmerle Brews & Preserves/Zimmerle Eats**
-###### **An IngloriousRat *Culinary Concept* Application** 
-###### **React/NextJS - CirrusUI Web App** <br>
-#### <h6 align="center">[Live Version](https://zimmerleeats.vercel.app/)</h6>
+##### &copy;2022 **Zimmerle Brews & Preserves/Zimmerle Eats**
+##### **An IngloriousRat *Culinary Concept* Application** 
+##### **React/NextJS - CirrusUI Web App** <br>
+#### [Live Version](https://zimmerleeats.vercel.app/)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 ___
-___
 #### **About This Repo:**
-##### The original concept was to build something modern and contemporary that suits the business model for Zimmerle Eats' ideas. What resulted was a very expressive yet polished design that accurately corresponds with entrepreneurial goals.
 
+##### Zimmerle Eats is a modern web application developed for a **San Antonio-based private chef and culinary consulting business**. The project combines a professional digital presence with an engaging customer experience designed to showcase culinary services, products, and event offerings.
+
+##### Built with **React and NextJS**, the application emphasizes responsive design, intuitive navigation, strong visual presentation, and a scalable component-based architecture.
+
+##### <ins>Project Focus</ins>:
+
+* ##### Professional presentation of Zimmerle Eats services and offerings
+* ##### Responsive, modern user experience across devices
+* ##### Visual-first presentation of culinary products and experiences
+* ##### Scalable foundation for future booking, ordering, and customer engagement
+* ##### Component-driven development using React and NextJS
+* ##### Deployment and production workflow through Vercel
+
+##### The project demonstrates the development of a **business-focused web application from concept through implementation**, combining modern frontend technologies with practical branding, UX, and customer-facing functionality.
+
+##### <ins>Future Development</ins>:
+
+##### Zimmerle Eats is intended to remain an evolving project.
+
+##### Potential future improvements include expanding the ordering and booking experience, improving service and menu management, adding more sophisticated forms, integrating additional business functionality, and continuing to refine the visual design and mobile experience.
+
+##### The long-term objective is to transform the application from a primarily presentation-focused website into a more complete digital platform for Zimmerle Eats and its customers.
+___
 ##### **Features:**
 * ##### *Sophisticated design concept that uses React/NextJS and styled with Cirrus CSS/UI*  
 * ##### *Interactive page components that both encourages and engages the users experience within* 
 * ##### *Captivating product imagery that entices the customer to purchase the services rendered*
+___
+
+##### <ins>Repository Structure</ins>:
+
+##### The repository follows a modular structure designed to keep application logic, UI components, styling, and configuration organized and maintainable.
+
+```
+zimmerleeats/
+├── public/                 # Static assets and public resources
+├── src/
+│   ├── components/         # Reusable React components
+│   ├── pages/              # Application pages and routes
+│   ├── styles/             # Global and component-specific styling
+│   ├── assets/             # Images and application assets
+│   └── utils/              # Shared utilities and helper functions
+├── package.json             # Project dependencies and scripts
+├── next.config.js           # NextJS configuration
+├── README.md                # Project documentation
+└── .gitignore               # Git exclusions
+```
+
+##### The structure separates **presentation, application logic, reusable components, and configuration**, providing a clean foundation for continued development and future feature expansion.
+
 ___
 #### **Build Tools:**
 ##### **This project uses the following packages:**
