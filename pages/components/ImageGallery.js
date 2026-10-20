@@ -5,7 +5,7 @@ export default function ImageGallery({ onBack, title }) {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    const imageUrl = "/images/gallery/place/gallery_holder.jpg"; 
+    const imageUrl = "/images/Gallery/Place/gallery_holder.jpg"; 
     setImages(Array.from({ length: 12 }, () => imageUrl));
   }, []);
 
