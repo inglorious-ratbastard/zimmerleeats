@@ -5,19 +5,24 @@ export default class Board extends React.Component {
         openAccordion: null
     };
 
-    componentDidMount() {
-    window.addEventListener("openAccordion", this.handleOpenAccordion);
-    }
+        componentDidMount() {
+            window.addEventListener("openAccordion", this.handleOpenAccordion);
+            window.addEventListener("closeAccordion", this.handleCloseAccordion);
+        }
 
-    componentWillUnmount() {
-    window.removeEventListener("openAccordion", this.handleOpenAccordion);
-    }
+        componentWillUnmount() {
+            window.removeEventListener("openAccordion", this.handleOpenAccordion);
+            window.removeEventListener("closeAccordion", this.handleCloseAccordion);
+        }
 
-    handleOpenAccordion = (e) => {
-    const index = e.detail;
-    this.setState({ openAccordion: index });
-    };
+        handleOpenAccordion = (e) => {
+            const index = e.detail;
+            this.setState({ openAccordion: index });
+        };
 
+        handleCloseAccordion = () => {
+            this.setState({ openAccordion: null });
+        };
 
     toggleAccordion = (index) => {
         this.setState((prev) => ({

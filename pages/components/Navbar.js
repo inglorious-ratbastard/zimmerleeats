@@ -22,6 +22,10 @@ export default class Navbar extends React.Component {
     scrollToSection = (id) => (e) => {
       e.preventDefault();
 
+      if (id !== "board") {
+        window.dispatchEvent(new CustomEvent("closeAccordion"));
+    }
+
       if (id === "gallery") {
         const gallery = document.getElementById("gallery");
 
