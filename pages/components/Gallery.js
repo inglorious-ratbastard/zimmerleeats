@@ -19,17 +19,26 @@ export default class Gallery extends React.Component {
   }
 
    cardBackgrounds = {
-      "Signature Charcuterie Boards": "/images/gallery/place/charcuterie_place.jpg",
-      "Private Dining Experiences": "/images/gallery/place/dining_place.jpg",
-      "Seasonal Ingredients": "/images/gallery/place/seasonal_place.jpg",
-      "Artisan Cheeses & Meats": "/images/gallery/place/artisan_place.jpg",
-      "Plated Chef Creations": "/images/gallery/place/plated_place.jpg",
-      "Intimate Dinner Parties": "/images/gallery/place/intimate_place.jpg",
-      "Custom Menu Design": "/images/gallery/place/custom_place.jpg",
-      "Elegant Event Catering": "/images/gallery/place/elegant_place.jpg",
-      "Desserts & Finishing Touches": "/images/gallery/place/desserts_place.jpg",
+      "Signature Charcuterie Boards":
+        "/images/Gallery/Place/charcuterie_place.jpg",
+      "Private Dining Experiences":
+        "/images/Gallery/Place/dining_place.jpg",
+      "Seasonal Ingredients":
+        "/images/Gallery/Place/seasonal_place.jpg",
+      "Artisan Cheeses & Meats":
+        "/images/Gallery/Place/artisan_place.jpg",
+      "Plated Chef Creations":
+        "/images/Gallery/Place/plated_place.jpg",
+      "Intimate Dinner Parties":
+        "/images/Gallery/Place/intimate_place.jpg",
+      "Custom Menu Design":
+        "/images/Gallery/Place/custom_place.jpg",
+      "Elegant Event Catering":
+        "/images/Gallery/Place/elegant_place.jpg",
+      "Desserts & Finishing Touches":
+        "/images/Gallery/Place/desserts_place.jpg",
     };
-
+    
     initCardEvents = () => {
       const cells = document.querySelectorAll('.ecg-card');
 
