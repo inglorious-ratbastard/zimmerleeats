@@ -11,7 +11,7 @@ export default class Event extends React.Component {
    <div className="event-content" id="event-info">
     
     <div id="event-title" className="text-center mb-1 pb-6">
-        <h5>Private Chef Catered Events</h5>
+        <h6><ins>Private Chef Catered Events</ins></h6>
     </div>
 
     <div className="row">
@@ -21,8 +21,8 @@ export default class Event extends React.Component {
            </p>
         </div>
         <div className="md:col-10 lg:col-4">
-            <div className="col-xs-12 u-center">
-            <img className="img-contain u-round-full" src="/images/Vector-Smart-Object-1-1.png" style={{ width: "100%", height: "auto" }} />
+            <div className="col-xs-12 u-center"> 
+            <img className="img-contain u-round-full mt-4 mb-5" src="/images/catering_logo.jpg" style={{ width: "75%", height: "auto", filter: "brightness(0.8)", opacity: 0.92 }} />
         </div>
         </div>
         <div className="md:col-10 lg:col-4">
@@ -34,6 +34,7 @@ export default class Event extends React.Component {
 
    </div>
   </div>
+          
           </React.Fragment>
         )
     }

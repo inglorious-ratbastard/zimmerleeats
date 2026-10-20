@@ -32,18 +32,18 @@ export default class Board extends React.Component {
 
   <div className="u-text-center pt-8 bg-black text-gray-300 u-opacity-60" id="board">
     <div className="board-cont" id="board-content">
-        <h6 className="board-title">The Tasting Board</h6>
+        <h6 className="board-title pt-2" style={{ color: '#B87333 !important', filter: 'brightness(1.8) !important' }}>The Tasting Board</h6>
 
         <div className="row u-justify-center u-gap-6">
             <div className="col-4">
                 <div className="p-4 board-highlight">
-                    <h6>Board & Menu Offerings</h6>
+                    <h6><ins style={{ color: '#FFBF00 !important' }}>Board & Menu Offerings</ins></h6>
                     <p>
                      Our private chef services offer a curated selection of seasonal dishes crafted with locally sourced ingredients and refined techniques. From intimate dinners to celebratory gatherings, each menu is thoughtfully designed to balance flavor, presentation, and experience. Our charcuterie boards feature an artful assortment of artisan cheeses, cured meats, house-made accompaniments, and fresh elements that complement every palate. Whether served as a centerpiece or a shared tasting experience, each offering reflects a commitment to quality, creativity, and elevated hospitality.
                     </p>
                 </div> 
-                <dl>
-                    <dt>The Tasting Experience</dt>
+                <dl >
+                    <dt><ins style={{ color: '#FFBF00 !important' }}>The Tasting Experience</ins></dt> 
                     <dd>
                        A guided selection of flavors designed to be savored slowly, highlighting balance, texture, and thoughtful pairings.
                        Each tasting invites engaging conversation, careful exploration of each bite, and a deeper appreciation for the artistry behind every ingredient.
@@ -53,7 +53,7 @@ export default class Board extends React.Component {
 
             <div className="col-4">
                 <div className="p-4 board-highlight">
-                    <h6>Curated Menu</h6>
+                    <h6 style={{ color: '#FFBF00 !important', textDecoration: 'underline' }}>Curated Menu</h6> 
                     <details className="accordion p-3" open={openAccordion === 0}
                         onClick={(e) => {
                         e.preventDefault();
@@ -96,6 +96,22 @@ export default class Board extends React.Component {
 
     </div>
 </div>  
+
+          <style>{`
+                    #board,
+                    #board * {
+                        color: white !important;
+                        font-weight: 900 !important;
+                    }
+                    #board summary {
+                        color: #B87333 !important;
+                        filter: brightness(1.8) !important;
+                        opacity: 1.9 !important; 
+                  } 
+                    .board-highlight p, dd {
+                        font-size: 13px !important;
+                    }
+                `}</style>
         
           </React.Fragment>
         )

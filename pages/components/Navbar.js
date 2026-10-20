@@ -18,12 +18,30 @@ export default class Navbar extends React.Component {
       document.body.style.overflow = 'auto';
     };
 
+  
     scrollToSection = (id) => (e) => {
       e.preventDefault();
 
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+      if (id === "gallery") {
+        const gallery = document.getElementById("gallery");
+
+        if (typeof window.returnToMainGallery === "function") {
+          window.returnToMainGallery();
+        } else if (gallery) {
+          gallery.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      } else {
+        const el = document.getElementById(id);
+
+        if (el) {
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
       }
 
       const menu = document.getElementById("header-menu");

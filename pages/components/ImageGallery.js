@@ -5,7 +5,7 @@ export default function ImageGallery({ onBack, title }) {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    const imageUrl = "https://galvestonmonthly.com/food-drink/boards2.png"; 
+    const imageUrl = "/images/gallery/place/gallery_holder.jpg"; 
     setImages(Array.from({ length: 12 }, () => imageUrl));
   }, []);
 
@@ -23,9 +23,19 @@ export default function ImageGallery({ onBack, title }) {
         }
       } 
 
+      @media (max-width: 749px) {
+        .image-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+          width: 90% !important;
+          margin: 20px 60px !important;
+        }
+      }
+
       @media (min-width: 750px) and (max-width: 900px) {
         .image-grid {
-          grid-template-columns: repeat(3, 1fr) !important;
+          grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+          width: 85% !important;
+          margin: 20px auto !important;
         }
       }
 
@@ -33,7 +43,8 @@ export default function ImageGallery({ onBack, title }) {
         .image-grid {
           grid-template-columns: repeat(3, 1fr) !important;
         }
-      }
+      }   
+
     `;
     document.head.appendChild(style);
   }, []);
@@ -50,7 +61,11 @@ export default function ImageGallery({ onBack, title }) {
               style={styles.imageWrapper}
               onClick={() => setSelectedImage(index)}
             >
-              <img src={img} alt={`Image ${index + 1}`} style={styles.image} />
+              <img
+  src={img}
+  alt={`Image ${index + 1}`}
+  style={{ ...styles.image, width: "60%", height: "60%", textAlign: "center", objectFit: "cover", borderRadius: "12px" }}
+/>
             </div>
           ))}
         </div>
@@ -97,20 +112,25 @@ const styles = {
   container: {
     maxWidth: "1000px",
     width: "100%",
-    padding: "40px 20px",
+    padding: "40px 0px",
     textAlign: "center",
   },
   title: {
     fontFamily: 'EB Garamond',
     fontSize: "16px", 
-    margin: "15px 0 20px 0", 
+    margin: "25px 0 40px 0", 
   },
+  
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-    gap: "20px",
-    margin: "30px 0",
+    gridTemplateColumns: "repeat(4, 1fr)",
+    columnGap: "-10px",
+    rowGap: "-12px",
+    margin: "20px auto",
+    width: "70%",
+    marginLeft: "200px", 
   },
+
   placeholder: {
     aspectRatio: "4 / 3",
     background: "#e0e0e0",
@@ -118,7 +138,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     color: "#777",
-    fontSize: "14px",
+    fontSize: "14px", 
   },
   button: {
     padding: "6px 12px",
@@ -127,6 +147,7 @@ const styles = {
     border: "none",
     background: "#000",
     color: "#fff",
+    marginTop: "-90px", 
   }, 
   overlay: {
     position: "fixed",

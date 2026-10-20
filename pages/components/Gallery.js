@@ -9,18 +9,25 @@ export default class Gallery extends React.Component {
 
     componentDidMount() {
       this.initCardEvents();
+      window.returnToMainGallery = this.handleBack;
     }
 
-    cardBackgrounds = {
-      "Signature Charcuterie Boards": "https://fox11online.com/resources/media2/16x9/514/986/0x176/90/61ff3392-29b7-48eb-9971-e53b0f9ba49e-SarasCharcuterieTree.jpg",
-      "Private Dining Experiences": "https://www.resto.be/across/resources/static/site/images/placeholder-detail-resto.jpg",
-      "Seasonal Ingredients": "https://insidebusiness.com/wp-content/uploads/2024/10/Conor-Colangelo.jpg",
-      "Artisan Cheeses & Meats": "https://media.istockphoto.com/id/1292301452/photo/charcuterie-board.jpg?s=612x612&w=0&k=20&c=LPSunUSE8s9Pg8YKwRIEuniJBQQlB9zMGl9wF7N-vRQ=",
-      "Plated Chef Creations": "https://img.freepik.com/free-photo/chef-working-together-professional-kitchen_23-2149727953.jpg",
-      "Intimate Dinner Parties": "https://images.stockcake.com/public/3/9/b/39b5f945-e808-4029-ac3f-f7e907456a08_large/elegant-dinner-party-stockcake.jpg",
-      "Custom Menu Design": "https://res.cloudinary.com/vistaprint/images/f_auto,q_auto/v1728011134/ideas-and-advice-prod/blogadmin/Rustic-Sunflower-Menu-Placeholder_238992b5d9/Rustic-Sunflower-Menu-Placeholder_238992b5d9.png?_i=AA",
-      "Elegant Event Catering": "https://t3.ftcdn.net/jpg/18/86/80/92/360_F_1886809267_iMvraASVMaIYDsxuQR3UdN7xNY232Ksy.jpg",
-      "Desserts & Finishing Touches": "https://www.tastingtable.com/img/gallery/why-you-should-order-a-chocolate-dessert-after-a-steak-dinner/intro-1740568254.jpg",
+  componentWillUnmount() {
+    if (window.returnToMainGallery === this.handleBack) {
+      delete window.returnToMainGallery;
+    }
+  }
+
+   cardBackgrounds = {
+      "Signature Charcuterie Boards": "/images/gallery/place/charcuterie_place.jpg",
+      "Private Dining Experiences": "/images/gallery/place/dining_place.jpg",
+      "Seasonal Ingredients": "/images/gallery/place/seasonal_place.jpg",
+      "Artisan Cheeses & Meats": "/images/gallery/place/artisan_place.jpg",
+      "Plated Chef Creations": "/images/gallery/place/plated_place.jpg",
+      "Intimate Dinner Parties": "/images/gallery/place/intimate_place.jpg",
+      "Custom Menu Design": "/images/gallery/place/custom_place.jpg",
+      "Elegant Event Catering": "/images/gallery/place/elegant_place.jpg",
+      "Desserts & Finishing Touches": "/images/gallery/place/desserts_place.jpg",
     };
 
     initCardEvents = () => {
